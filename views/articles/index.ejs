@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Wiki App</title>
+    <%- include ./partials/head.ejs %>
   </head>
   <body>
+    <a class="" href="/articles/new">+</a>
 
-    <div class="">
-      <p><%= articles[0].title %></p>
-      <img src="<%= articles[0].img_url %>" alt="">
-    </div>
+    <% articles.forEach((article) => { %>
+      <div class="">
+        <img src="<%= articles[0].img_url %>" width="300px" alt="">
+        <p><%= article.title %></p>
+        <p><%= article.content %></p>
+        <p><%= article.category %></p>
+        <p><%= article.author %></p>
+      </div>
+    <% }); %>
 
   </body>
 </html>

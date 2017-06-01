@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ./partials/head.ejs %>
+  </head>
+  <body>
+
+    <form method="POST" action="/articles">
+      <div>
+        Title
+      </div>
+      <div>
+        <input type="text" name="article[title]" placeholder="title">
+      </div>
+      <div>
+        Image
+      </div>
+      <div>
+        <input type="text" name="article[img_url]" placeholder="image url">
+      </div>
+      <div>
+        Text Field
+      </div>
+      <div>
+        <input type="text" name="article[content]" placeholder="image url">
+      </div>
+      <!-- <div>
+        Category
+      </div>
+      <div>
+        <select class="" name="">
+          <option value="1">A</option>
+          <option value="2">B</option>
+          <option value="3">C</option>
+          <option value="4">D</option>
+        </select>
+      </div> -->
+      <div>
+        Author
+      </div>
+      <div>
+        <input type="text" name="article[author]" placeholder="image url">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+  </body>
+</html>

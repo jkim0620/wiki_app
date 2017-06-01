@@ -15,4 +15,19 @@ controller.index = (req, res) => {
   });
 }
 
+controller.indexNew = (req, res) => {
+  res.render('articles/new.ejs');
+}
+
+controller.create = (req, res) => {
+  Article
+  .save(req.body.article)
+  .then(() => {
+    res.redirect('/');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+}
+
 module.exports = controller;

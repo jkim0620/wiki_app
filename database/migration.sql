@@ -5,7 +5,7 @@ CREATE TABLE articles (
   title VARCHAR(128) NOT NULL DEFAULT 'untitled',
   img_url VARCHAR(255) NOT NULL DEFAULT 'http://saveabandonedbabies.org/wp-content/uploads/2015/08/default.png',
   content TEXT,
-  category VARCHAR(64) NOT NULL,
+  category VARCHAR(64),
   author VARCHAR(64),
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
 );
