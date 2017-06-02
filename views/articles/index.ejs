@@ -8,11 +8,12 @@
 
     <% articles.forEach((article) => { %>
       <div class="">
-        <img src="<%= articles[0].img_url %>" width="300px" alt="">
+        <a href="http://localhost:3000/articles/<%= article.id %>"><img src="<%= article.img_url %>" width="300px" alt=""></a>
         <p><%= article.title %></p>
         <p><%= article.content %></p>
         <p><%= article.category %></p>
         <p><%= article.author %></p>
+        <p><%= article.date_created %></p>
       </div>
     <% }); %>
 

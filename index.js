@@ -20,13 +20,16 @@ const dir = {
 
 // app.use(logger());
 
+// Use body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Use method-override
+app.use(methodOverride("_method"));
 
 app.use(express.static(dir.public));
 app.use('/vendor/jquery', express.static(dir.jquery));
 app.use('vendor/materialize', express.static(dir.materialize));
-
 
 app.use('/articles', articleRouter);
 

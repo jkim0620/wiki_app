@@ -30,4 +30,41 @@ controller.create = (req, res) => {
   });
 }
 
+controller.show = (req, res) => {
+  Article
+  .findById(req.params.id)
+  .then((article) => {
+    res.render('articles/show.ejs', {
+      article: article
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+}
+
+controller.update = (req, res) => {
+  Article
+  .findById(req.params.id)
+  .then((article) => {
+    res.render('articles/edit.ejs', {
+      article: article
+    })
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+}
+
+controller.showUpdate = (req, res) => {
+  Article
+  .update(req.body.article)
+  .then(() => {
+    res.redirect('/');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+}
+
 module.exports = controller;

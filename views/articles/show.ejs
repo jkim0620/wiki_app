@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ./partials/head.ejs %>
+  </head>
+  <body>
+    <!-- <a class="" href="/articles/new">+</a> -->
+
+    <div class="">
+      <img src="<%= article.img_url %>" width="300px" alt="">
+      <p><%= article.title %></p>
+      <p><%= article.content %></p>
+      <p><%= article.category %></p>
+      <p><%= article.author %></p>
+      <a href="/articles/<%= article.id %>/edit"><button type="button" name="button">Edit</button></a>
+    </div>
+
+  </body>
+</html>

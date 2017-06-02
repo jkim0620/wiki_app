@@ -5,24 +5,24 @@
   </head>
   <body>
 
-    <form method="POST" action="/articles">
+    <form method="POST" action="/articles/<%= article.id %>/edit?_method=put">
       <div>
         Title
       </div>
       <div>
-        <input type="text" name="article[title]" placeholder="title">
+        <input type="text" name="article[title]" placeholder="title" value="<%= article.title %>">
       </div>
       <div>
         Image
       </div>
       <div>
-        <input type="text" name="article[img_url]" placeholder="image url">
+        <input type="text" name="article[img_url]" placeholder="image url" value="<%= article.img_url %>">
       </div>
       <div>
         Text Field
       </div>
       <div>
-        <textarea name="article[content]" placeholder="write"></textarea>
+        <textarea name="article[content]" placeholder="write"><%= article.content %></textarea>
       </div>
       <div>
         Category
@@ -39,10 +39,13 @@
         Author
       </div>
       <div>
-        <input type="text" name="article[author]" placeholder="name">
+        <input type="text" name="article[author]" placeholder="name" value="<%= article.author %>">
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <input type="hidden" name="article[id]" value="<%= article.id %>">
+      </div>
+      <div>
+        <button type="submit">Submit Change</button>
       </div>
     </form>
 
