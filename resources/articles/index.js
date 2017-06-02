@@ -5,10 +5,8 @@ const views = require('./viewsController');
 
 router.get('/new', controller.indexNew);
 
-router.get('/:id', controller.show);
-
-router.route('/:id/edit')
-  .get(controller.update)
+router.route('/:id')
+  .get(controller.show)
   .put(controller.showUpdate)
   .delete(controller.destroy);
 

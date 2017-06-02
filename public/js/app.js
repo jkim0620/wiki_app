@@ -23,7 +23,7 @@ $(document).ready(() => {
 
     $.ajax({
       method: 'DELETE',
-      url: `/articles/${articleId}/edit`
+      url: `/articles/${articleId}`
     })
     .then((response) => {
       console.log('success');
