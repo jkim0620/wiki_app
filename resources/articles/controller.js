@@ -60,10 +60,19 @@ controller.showUpdate = (req, res) => {
   Article
   .update(req.body.article)
   .then(() => {
-    res.redirect('/');
+    res.redirect(`/articles/${req.params.id}`);
   })
   .catch((err) => {
     console.log(err);
+  });
+}
+
+controller.destroy = (req, res) => {
+  Article
+  .destroy(req.params.id)
+  .then(data => res.json(data))
+  .catch((err) => {
+    res.status(400).send(err);
   });
 }
 

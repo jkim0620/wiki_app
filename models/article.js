@@ -48,4 +48,10 @@ Article.update = (article) => {
     `, article);
 }
 
+Article.destroy = (id) => {
+  return db.none(`
+    DELETE FROM articles
+    WHERE articles.id = $1`, [id]);
+};
+
 module.exports = Article;

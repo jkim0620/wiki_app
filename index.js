@@ -10,12 +10,10 @@ const app = express();
 
 const PORT = process.argv[2] || process.env.PORT || 3000;
 
-app.set('view engine', 'ejs');
-
 const dir = {
   public: path.join(__dirname, 'public'),
-  jquery: path.join(__dirname, 'node_modules/jqeury/dist'),
-  materialize: path.join(__dirname, 'node_modules/materialize/dist'),
+  jquery: path.join(__dirname, 'node_modules/jquery/dist'),
+  materialize: path.join(__dirname, 'node_modules/materialize-css/dist'),
 };
 
 // app.use(logger());
@@ -24,12 +22,14 @@ const dir = {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Use method-override
-app.use(methodOverride("_method"));
-
 app.use(express.static(dir.public));
 app.use('/vendor/jquery', express.static(dir.jquery));
-app.use('vendor/materialize', express.static(dir.materialize));
+app.use('/vendor/materialize', express.static(dir.materialize));
+
+app.set('view engine', 'ejs');
+
+// Use method-override
+app.use(methodOverride("_method"));
 
 app.use('/articles', articleRouter);
 

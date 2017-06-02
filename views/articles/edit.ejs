@@ -46,8 +46,21 @@
       </div>
       <div>
         <button type="submit">Submit Change</button>
+        <button type="submit" class="close-edit-modal-btn">CLOSE</button>
       </div>
     </form>
+
+    <button class="open-modal-btn" name="button">DELETE</button>
+
+    <div class="delete-modal-container">
+      <div class="delete-modal-content">
+        <p>
+          Are you sure you want to delete?
+        </p>
+        <button class="delete-article" data-id=<%= article.id %>>DELETE</button>
+        <button class="close-modal-btn">CLOSE</button>
+      </div>
+    </div>
 
   </body>
 </html>

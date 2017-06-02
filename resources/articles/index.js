@@ -9,11 +9,13 @@ router.get('/:id', controller.show);
 
 router.route('/:id/edit')
   .get(controller.update)
-  .put(controller.showUpdate);
+  .put(controller.showUpdate)
+  .delete(controller.destroy);
 
 router.route('/')
   .get(controller.index)
   .post(controller.create);
+
 
 
 module.exports = router;

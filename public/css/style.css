@@ -1,0 +1,32 @@
+#edit-modal {
+  display: none;
+}
+
+.delete-modal-container, .edit-modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.7);
+  padding: 100px;
+  z-index: 1;
+}
+
+.delete-modal-content {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 50px;
+  background: white;
+  text-align: center;
+}
+
+.edit-modal-content {
+  width: 80%;
+  max-width: 980px;
+  height: auto;
+  padding: 50px;
+  background: white;
+}
