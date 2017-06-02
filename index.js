@@ -22,6 +22,24 @@ const dir = {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// app.use((req, res, next) => {
+//   if (req.body) {
+//     for (let key in req.body) {
+//       let newKey = {};
+//
+//       for (let subkey in req.body[key]) {
+//         if (req.body[key][subkey] !== "") {
+//           newKey[subkey] = req.body[key][subkey];
+//         }
+//       }
+//
+//       req.body[key] = newKey;
+//     }
+//   }
+//
+//   next();
+// });
+
 app.use(express.static(dir.public));
 app.use('/vendor/jquery', express.static(dir.jquery));
 app.use('/vendor/materialize', express.static(dir.materialize));

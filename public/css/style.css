@@ -12,6 +12,7 @@
   background: rgba(0,0,0, 0.7);
   padding: 100px;
   z-index: 1;
+  overflow: scroll;
 }
 
 .delete-modal-content {
@@ -29,4 +30,8 @@
   height: auto;
   padding: 50px;
   background: white;
+}
+
+textarea {
+  height: 400px;
 }

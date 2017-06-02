@@ -20,6 +20,14 @@ controller.indexNew = (req, res) => {
 }
 
 controller.create = (req, res) => {
+  if (req.body.article.title === "") {
+    req.body.article.title = "untitled";
+  }
+
+  if (req.body.article.img_url === "") {
+    req.body.article.img_url = "http://saveabandonedbabies.org/wp-content/uploads/2015/08/default.png";
+  }
+
   Article
   .save(req.body.article)
   .then(() => {
@@ -42,19 +50,6 @@ controller.show = (req, res) => {
     console.log(err);
   });
 }
-
-// controller.update = (req, res) => {
-//   Article
-//   .findById(req.params.id)
-//   .then((article) => {
-//     res.render('articles/edit.ejs', {
-//       article: article
-//     })
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-// }
 
 controller.showUpdate = (req, res) => {
   Article

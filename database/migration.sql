@@ -2,12 +2,12 @@ DROP TABLE IF EXISTS articles;
 
 CREATE TABLE articles (
   id BIGSERIAL PRIMARY KEY,
-  title VARCHAR(128) NOT NULL DEFAULT 'untitled',
-  img_url VARCHAR(255) NOT NULL DEFAULT 'http://saveabandonedbabies.org/wp-content/uploads/2015/08/default.png',
-  content TEXT,
+  title VARCHAR(128) DEFAULT 'untitled',
+  img_url VARCHAR(255) DEFAULT 'http://saveabandonedbabies.org/wp-content/uploads/2015/08/default.png',
+  content TEXT NOT NULL,
   category VARCHAR(64) NOT NULL,
-  author VARCHAR(64),
-  date_created TIMESTAMP NOT NULL DEFAULT NOW()
+  author VARCHAR(64) NOT NULL,
+  date_created TIMESTAMP DEFAULT NOW()
 );
 
 CREATE INDEX on articles (category);

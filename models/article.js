@@ -5,6 +5,7 @@ let Article = {};
 Article.findAll = () => {
   return db.any(`
     SELECT * FROM articles
+    ORDER BY date_created DESC
   `);
 }
 
@@ -42,7 +43,8 @@ Article.update = (article) => {
         img_url = $/img_url/,
         content = $/content/,
         category = $/category/,
-        author = $/author/
+        author = $/author/,
+        date_created = CURRENT_TIMESTAMP
     WHERE id = $/id/
     RETURNING *
     `, article);
