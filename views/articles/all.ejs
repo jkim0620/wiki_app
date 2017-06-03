@@ -6,13 +6,12 @@
   <body>
     <a class="" href="/articles/new">+</a>
 
-    <h1>HOME PAGE</h1>
     <select class="" name="articles[category]" onChange="window.location.href=this.value">
-      <option value="http://localhost:3000/articles/">Show All</option>
-      <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
-      <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
-      <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
-      <option value="http://localhost:3000/articles/?category=Travel">Travel</option>
+      <option value="http://localhost:3000/articles/all">Show All</option>
+      <option value="http://localhost:3000/articles/culture">Culture</option>
+      <option value="http://localhost:3000/articles/culture">Art and Design</option>
+      <option value="http://localhost:3000/articles/culture">Architecture</option>
+      <option value="http://localhost:3000/articles/culture">Travel</option>
     </select>
 
     <% articles.forEach((article) => { %>

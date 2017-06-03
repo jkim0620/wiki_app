@@ -3,17 +3,45 @@ const Article = require('../../models/article');
 let controller = {};
 
 controller.index = (req, res) => {
-  Article
-  .findAll()
-  .then((articles) => {
-    res.render('articles/index.ejs', {
-      articles: articles
+  if (req.query.category) {
+    Article
+    .sort({
+      category: req.query.category
+    })
+    .then((articles) => {
+      res.render('articles/index.ejs', {
+        articles: articles
+      })
+    })
+    .catch((err) => {
+      console.log(err);
     });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+  } else {
+    Article
+    .findAll()
+    .then((articles) => {
+      res.render('articles/index.ejs', {
+        articles: articles
+      })
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
 }
+
+// controller.showAll = (req, res) => {
+//   Article
+//   .findAll()
+//   .then((articles) => {
+//     res.render('articles/all.ejs', {
+//       articles: articles
+//     })
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+// }
 
 controller.indexNew = (req, res) => {
   res.render('articles/new.ejs');

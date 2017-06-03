@@ -4,4 +4,4 @@ INSERT INTO articles (
   content,
   category,
   author
-) VALUES ('someTitle', 'https://pressupinc.com/wp-content/uploads/2014/06/sunglassed-rubber-duck.jpg', 'someContent', 'art', 'Julia Kim');
+) VALUES ('someTitle', 'https://pressupinc.com/wp-content/uploads/2014/06/sunglassed-rubber-duck.jpg', 'someContent', 'Culture', 'Julia Kim');
