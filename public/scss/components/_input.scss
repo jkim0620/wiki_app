@@ -19,8 +19,8 @@ input {
 .edit-form {
   input {
     box-sizing: border-box;
-    background: $neon-yellow;
-    border-bottom: $deep-purple-gray 2px solid;
+    background: $light-gray;
+    border-bottom: $neon-yellow 3px solid;
     padding-left: 20px;
   }
   .input-title {
@@ -28,7 +28,7 @@ input {
     font-weight: bold;
   }
   textarea {
-    border: $deep-purple-gray solid 2px;
+    border: $light-gray solid 3px;
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@ input {
   .select-wrapper input.select-dropdown {
     padding-left: 20px;
     box-sizing: border-box;
-    background: $neon-yellow;
-    border-bottom: $deep-purple-gray 2px solid;
+    background: $light-gray;
+    border-bottom: $neon-yellow 3px solid;
   }
 }

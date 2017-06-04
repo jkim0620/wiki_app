@@ -34,15 +34,14 @@
 
 .edit-modal-content {
   margin: 0 auto;
-  width: 60%;
-  max-width: 980px;
-  height: auto;
-  padding: 70px;
-  background: white;
-  border-bottom: $neon-yellow solid 50px;
-  border-right: $neon-yellow solid 50px;
-}
-
-textarea {
-  height: 400px;
+  width: 50%;
+  max-width: 800px;
+  max-height: 110vh;
+  padding: 50px 70px;
+  background: $white;
+  // border-bottom: $neon-yellow solid 50px;
+  // border-right: $neon-yellow solid 50px;
+  textarea {
+    height: 150px;
+  }
 }

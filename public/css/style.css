@@ -24,7 +24,7 @@ h1 {
 .img-box {
   margin-top: 30px;
   margin-left: 10px;
-  max-height: 250px;
+  height: 200px;
   overflow: hidden; }
   .img-box img {
     width: 100%; }
@@ -38,7 +38,8 @@ h1 {
   background: #e6e6ed;
   padding: 30px;
   margin-top: -30px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  height: 300px; }
 
 .show-wrapper {
   background-color: #3a3947; }
@@ -99,16 +100,13 @@ h1 {
 
 .edit-modal-content {
   margin: 0 auto;
-  width: 60%;
-  max-width: 980px;
-  height: auto;
-  padding: 70px;
-  background: white;
-  border-bottom: #eaff0a solid 50px;
-  border-right: #eaff0a solid 50px; }
-
-textarea {
-  height: 400px; }
+  width: 50%;
+  max-width: 800px;
+  max-height: 110vh;
+  padding: 50px 70px;
+  background: #ffffff; }
+  .edit-modal-content textarea {
+    height: 150px; }
 
 input .select-dropdown {
   border-bottom: #ff4800;
@@ -120,22 +118,22 @@ input .select-dropdown {
 
 .edit-form input {
   box-sizing: border-box;
-  background: #eaff0a;
-  border-bottom: #3a3947 2px solid;
+  background: #e6e6ed;
+  border-bottom: #eaff0a 3px solid;
   padding-left: 20px; }
 .edit-form .input-title {
   color: #3a3947;
   font-weight: bold; }
 .edit-form textarea {
-  border: #3a3947 solid 2px;
+  border: #e6e6ed solid 2px;
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 20px; }
 .edit-form .select-wrapper input.select-dropdown {
   padding-left: 20px;
   box-sizing: border-box;
-  background: #eaff0a;
-  border-bottom: #3a3947 2px solid; }
+  background: #e6e6ed;
+  border-bottom: #eaff0a 3px solid; }
 
 .edit-btn, .back-btn {
   padding: 10px;
