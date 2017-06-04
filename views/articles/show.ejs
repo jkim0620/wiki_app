@@ -5,51 +5,58 @@
   </head>
   <body>
     <!-- <a class="" href="/articles/new">+</a> -->
-
-    <div class="">
-      <img src="<%= article.img_url %>" width="300px" alt="">
-      <p><%= article.title %></p>
-      <p><%= article.content %></p>
-      <p><%= article.category %></p>
-      <p><%= article.author %></p>
-      <!-- <a href="/articles/<%= article.id %>/edit"><button type="button" name="button">Edit</button></a> -->
-    </div>
-    <button class="edit-btn" type="button" name="button">EDIT</button>
-    <a href="/articles"><button class="back-btn" type="button" name="button">BACK</button></a>
+    <div class="show-wrapper">
+      <div class="container">
+        <div class="wrapper">
+          <div class="article-wrapper">
+            <img src="<%= article.img_url %>" alt="">
+            <div class="article-container">
+              <p class="category-font"><%= article.category %></p>
+              <p class="title-font"><%= article.title %></p>
+              <p class="author-font"><%= article.author %></p>
+              <p class="date-font"><%= article.date_created %></p>
+              <p class="content-font"><%= article.content %></p>
+              <button class="edit-btn" type="button" name="button">EDIT</button>
+              <a href="/articles"><button class="back-btn" type="button" name="button">BACK</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="edit-modal-container">
       <div class="edit-modal-content">
-        <form method="POST" action="/articles/<%= article.id %>?_method=put">
-          <div>
+        <form class="edit-form" method="POST" action="/articles/<%= article.id %>?_method=put">
+          <div class="input-title">
             Title
           </div>
           <div>
             <input type="text" name="article[title]" placeholder="title" value="<%= article.title %>">
           </div>
-          <div>
+          <div class="input-title">
             Image
           </div>
           <div>
             <input type="text" name="article[img_url]" placeholder="image url" value="<%= article.img_url %>">
           </div>
-          <div>
+          <div class="input-title">
             Text Field
           </div>
           <div>
             <textarea name="article[content]" placeholder="write"><%= article.content %></textarea>
           </div>
-          <div>
+          <div class="input-title">
             Category
           </div>
           <div>
             <select class="" name="article[category]">
+              <option value="<%= article.category %>"><%= article.category %></option>
               <option value="Culture">Culture</option>
               <option value="Art and Design">Art and Design</option>
               <option value="Architecture">Architecture</option>
-              <option value="Food">Food</option>
+              <option value="People">People</option>
             </select>
           </div>
-          <div>
+          <div class="input-title">
             Author
           </div>
           <div>
@@ -59,11 +66,11 @@
             <input type="hidden" name="article[id]" value="<%= article.id %>">
           </div>
           <div>
-            <button type="submit">Submit Change</button>
+            <button class="submit-change-btn" type="submit">SUBMIT CHANGE</button>
             <button class="close-edit-modal-btn">CLOSE</button>
           </div>
         </form>
-        <button class="open-modal-btn" name="button">DELETE</button>
+        <button class="open-modal-btn" name="button"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></button>
       </div>
     </div>
 
@@ -78,5 +85,6 @@
     </div>
 
 
+    </div>
   </body>
 </html>

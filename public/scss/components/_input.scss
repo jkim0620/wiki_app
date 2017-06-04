@@ -1,0 +1,42 @@
+// .caret {
+//   background-color: $red-orange;
+// }
+
+input {
+  .select-dropdown {
+    border-bottom: $red-orange;
+    border-radius: 5px;
+    color: $red-orange;
+  }
+}
+
+.select-dropdown:active {
+  li {
+    color: $deep-purple-gray;
+  }
+}
+
+.edit-form {
+  input {
+    box-sizing: border-box;
+    background: $neon-yellow;
+    border-bottom: $deep-purple-gray 2px solid;
+    padding-left: 20px;
+  }
+  .input-title {
+    color: $deep-purple-gray;
+    font-weight: bold;
+  }
+  textarea {
+    border: $deep-purple-gray solid 2px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .select-wrapper input.select-dropdown {
+    padding-left: 20px;
+    box-sizing: border-box;
+    background: $neon-yellow;
+    border-bottom: $deep-purple-gray 2px solid;
+  }
+}

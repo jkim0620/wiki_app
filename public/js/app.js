@@ -1,6 +1,18 @@
 $(document).ready(() => {
   console.log("jquery working");
+
+  // $(".button-collapse").sideNav();
+  //
+  // $('.parallax').parallax();
+
   $('select').material_select();
+
+  // var options = [
+  //     {selector: '.text-box', offset: 200, callback: function(el) {
+  //       Materialize.showStaggerdList($(el));
+  //     } }
+  //   ];
+  //   Materialize.scrollFire(options);
 
   $('.edit-btn').on('click', () => {
     $('.edit-modal-container').fadeIn(500);

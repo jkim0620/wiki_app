@@ -1,0 +1,35 @@
+.title-font {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.date-font {
+  font-size: 11px;
+}
+
+.author-font {
+  font-weight: bold;
+}
+
+.category-font {
+  color: $red;
+  font-weight: bold;
+}
+
+.link-font {
+  text-align: right;
+}
+
+.icon-color {
+  color: $white;
+}
+
+.icon-circle {
+  // margin-left: 80px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $red;
+  text-align: center;
+}
