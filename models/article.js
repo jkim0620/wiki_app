@@ -10,42 +10,6 @@ Article.findAll = () => {
   `);
 }
 
-Article.findCulture = () => {
-  return db.any(`
-    SELECT *
-    FROM articles
-    WHERE category = 'Culture'
-    ORDER BY date_created DESC
-  `);
-}
-
-Article.findArt = () => {
-  return db.any(`
-    SELECT *
-    FROM articles
-    WHERE category = 'Art and Design'
-    ORDER BY date_created DESC
-  `);
-}
-
-Article.findArchitecture = () => {
-  return db.any(`
-    SELECT *
-    FROM articles
-    WHERE category = 'Architecture'
-    ORDER BY date_created DESC
-  `);
-}
-
-Article.findTravel = () => {
-  return db.any(`
-    SELECT *
-    FROM articles
-    WHERE category = 'Travel'
-    ORDER BY date_created DESC
-  `);
-}
-
 Article.sort = (category) => {
   return db.any(`
     SELECT *
