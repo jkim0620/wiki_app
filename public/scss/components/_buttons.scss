@@ -1,24 +1,16 @@
-.edit-btn, .back-btn {
+// All buttons
+.edit-btn, .back-btn, .submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
   padding: 10px;
-  width: 80px;
   border-radius: 10px;
-  color: $gray;
   margin: 10px;
   border: none;
-  background-color: $red;
   color: $white;
-  // font-weight: lighter;
 }
 
-
 // Buttons in edit form
-.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
-  // font-weight: lighter;
-  border: none;
-  color: $white;
+.edit-btn, .back-btn {
+  width: 80px;
+  background-color: $red;
 }
 
 .submit-change-btn {
@@ -38,10 +30,12 @@
 
 // Delete modal buttons
 .delete-article {
+  width: 90px;
   background: $red;
 }
 
 .close-modal-btn {
+  width: 90px;
   background: $deep-purple-gray;
 }
 

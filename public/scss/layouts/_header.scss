@@ -1,16 +1,5 @@
-.parallax-container {
-  height: 500px;
-  background: red;
-  color: $white;
-}
 
-.parallax {
-  p {
-    color: $white;
-  }
-}
-
-.nav {
+.nav-section {
   background-color: $deep-purple-gray;
   position: fixed;
   top: 0;
@@ -30,8 +19,6 @@
 .category-select input.select-dropdown{
   padding-left: 20px;
   box-sizing: border-box;
-  // background: $white;
-  // border-radius: 5px;
   border-bottom: $light-gray 1px solid;
   margin-bottom: 0;
   margin-top: 18px;

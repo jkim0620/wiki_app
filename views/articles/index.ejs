@@ -5,30 +5,12 @@
   </head>
   <body>
 
-    <section class="nav">
+    <section class="nav-section">
       <div class="container">
         <div class="row">
           <div class="col s3">
             <h1>i<span class="logo-color">NSP</span>i<span class="logo-color">RE</span></h1>
           </div>
-          <!-- <div class="col s3 push-s5">
-            <select class="category-select" name="articles[category]" onChange="window.location.href=this.value">
-              <option value="http://localhost:3000/articles/">Category</option>
-              <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
-              <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
-              <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
-              <option value="http://localhost:3000/articles/?category=People">People</option>
-              <option value="http://localhost:3000/articles/">Show All</option>
-            </select>
-          </div>
-          <div class="col s1 push-s5">
-            <a href="/articles/new"><button class="new-form-link" type="button" name="button">+</button></a>
-          </div> -->
-<!--
-          <nav class=top-nav>
-
-            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
-          </nav> -->
         </div>
       </div>
     </section>
@@ -51,23 +33,15 @@
                 <div class="img-box">
                   <img src="<%= article.img_url %>">
                 </div> <!-- /img-box -->
-
                 <div class="text-box">
                   <p class="category-font"><%= article.category %></p>
                   <p class="title-font"><%= article.title %></p>
                   <p class="author-font"><%= article.author %></p>
                   <p class="date-font"><%= article.date_created %></p>
-                  <!-- <p class="content-font"><%= article.content %></p> -->
                   <div class="icon-circle">
                     <a class="link-font" href="http://localhost:3000/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-1x icon-color" aria-hidden="true"></i></a>
                   </div>
-                  <!-- <div class>
-
-                  </div> -->
                 </div> <!-- /text-box -->
-
-
-
               </div> <!-- /article-box -->
             </div> <!-- /col -->
           </div> <!-- /content-container -->
@@ -78,26 +52,19 @@
 
     <section class="footer-section">
       <div class="container">
-        <!-- <div class="row">
-          <div class="col s3 push-s5"> -->
-            <select class="category-footer" name="articles[category]" onChange="window.location.href=this.value">
-              <option value="http://localhost:3000/articles/">Category</option>
-              <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
-              <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
-              <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
-              <option value="http://localhost:3000/articles/?category=People">People</option>
-              <option value="http://localhost:3000/articles/">Show All</option>
-            </select>
-            <div class="footer-content-container">
-              <a href="/articles/new"><button class="new-form-link-footer" type="button" name="button">Add New +</button></a>
-              <p class="copyright"><i class="fa fa-copyright fa-1x" aria-hidden="true"></i> Julia Kim</p>
-            </div>
-          </div> <!-- /container -->
-          <!-- <div class="col s1 push-s5"> -->
-
-          <!-- </div> -->
-        <!-- </div> -->
-      </div>
+        <select class="category-footer" name="articles[category]" onChange="window.location.href=this.value">
+          <option value="http://localhost:3000/articles/">Category</option>
+          <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
+          <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
+          <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
+          <option value="http://localhost:3000/articles/?category=People">People</option>
+          <option value="http://localhost:3000/articles/">Show All</option>
+        </select>
+        <div class="footer-content-container">
+          <a href="/articles/new"><button class="new-form-link-footer" type="button" name="button">Add New +</button></a>
+          <p class="copyright"><i class="fa fa-copyright fa-1x" aria-hidden="true"></i> Julia Kim</p>
+        </div>
+      </div> <!-- /container -->
     </section>
 
   </body>

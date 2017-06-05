@@ -13,11 +13,24 @@
   overflow: scroll;
 }
 
+// Edit modal
 .edit-modal-container {
-  // background: rgba(234, 255, 10, 0.7);
   background: rgba(0,0,0, 0.7);
 }
 
+.edit-modal-content {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 800px;
+  max-height: 120vh;
+  padding: 50px 70px;
+  background: $white;
+  textarea {
+    height: 150px;
+  }
+}
+
+// Delete modal
 .delete-modal-container {
   background: rgba(0,0,0, 0.7);
 }
@@ -25,23 +38,9 @@
 .delete-modal-content {
   margin: 100px auto;
   width: 500px;
-  height: 180px;
+  height: 200px;
   border-radius: 10px;
   padding: 50px;
   background: white;
   text-align: center;
-}
-
-.edit-modal-content {
-  margin: 0 auto;
-  width: 50%;
-  max-width: 800px;
-  max-height: 110vh;
-  padding: 50px 70px;
-  background: $white;
-  // border-bottom: $neon-yellow solid 50px;
-  // border-right: $neon-yellow solid 50px;
-  textarea {
-    height: 150px;
-  }
 }

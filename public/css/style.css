@@ -74,15 +74,7 @@ h1 {
   border-bottom: solid #eaff0a 40px;
   border-right: solid #eaff0a 40px; }
 
-.parallax-container {
-  height: 500px;
-  background: red;
-  color: #ffffff; }
-
-.parallax p {
-  color: #ffffff; }
-
-.nav {
+.nav-section {
   background-color: #3a3947;
   position: fixed;
   top: 0;
@@ -91,9 +83,9 @@ h1 {
   height: 90px;
   border-bottom: 15px solid #eaff0a;
   z-index: 1000; }
-  .nav h1 {
+  .nav-section h1 {
     font-size: 30px; }
-  .nav a {
+  .nav-section a {
     color: #3a3947; }
 
 .category-select input.select-dropdown {
@@ -161,27 +153,27 @@ h1 {
 .edit-modal-container {
   background: rgba(0, 0, 0, 0.7); }
 
+.edit-modal-content {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 800px;
+  max-height: 120vh;
+  padding: 50px 70px;
+  background: #ffffff; }
+  .edit-modal-content textarea {
+    height: 150px; }
+
 .delete-modal-container {
   background: rgba(0, 0, 0, 0.7); }
 
 .delete-modal-content {
   margin: 100px auto;
   width: 500px;
-  height: 180px;
+  height: 200px;
   border-radius: 10px;
   padding: 50px;
   background: white;
   text-align: center; }
-
-.edit-modal-content {
-  margin: 0 auto;
-  width: 50%;
-  max-width: 800px;
-  max-height: 110vh;
-  padding: 50px 70px;
-  background: #ffffff; }
-  .edit-modal-content textarea {
-    height: 150px; }
 
 .edit-form input, .new-form input {
   box-sizing: border-box;
@@ -206,22 +198,16 @@ h1 {
 .new-form textarea {
   height: 300px; }
 
-.edit-btn, .back-btn {
+.edit-btn, .back-btn, .submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
   padding: 10px;
-  width: 80px;
   border-radius: 10px;
-  color: #232323;
   margin: 10px;
   border: none;
-  background-color: #fc0043;
   color: #ffffff; }
 
-.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
-  border: none;
-  color: #ffffff; }
+.edit-btn, .back-btn {
+  width: 80px;
+  background-color: #fc0043; }
 
 .submit-change-btn {
   background: #fc0043;
@@ -236,9 +222,11 @@ h1 {
   width: 50px; }
 
 .delete-article {
+  width: 90px;
   background: #fc0043; }
 
 .close-modal-btn {
+  width: 90px;
   background: #3a3947; }
 
 .new-submit-btn {
