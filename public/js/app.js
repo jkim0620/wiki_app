@@ -7,12 +7,6 @@ $(document).ready(() => {
 
   $('select').material_select();
 
-  // var options = [
-  //     {selector: '.text-box', offset: 200, callback: function(el) {
-  //       Materialize.showStaggerdList($(el));
-  //     } }
-  //   ];
-  //   Materialize.scrollFire(options);
 
   $('.edit-btn').on('click', () => {
     $('.edit-modal-container').fadeIn(500);

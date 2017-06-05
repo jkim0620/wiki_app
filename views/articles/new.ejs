@@ -5,46 +5,62 @@
   </head>
   <body>
 
-    <form method="POST" action="/articles">
-      <div>
-        Title
+    <section class="new-section">
+      <div class="container">
+        <div class="new-form-container">
+          <form class="new-form" method="POST" action="/articles">
+            <div class="row">
+              <div class="col s6">
+                <div class="input-title">
+                  Title
+                </div>
+                <div>
+                  <input type="text" name="article[title]" placeholder="Title">
+                </div>
+                <div class="input-title">
+                  Image
+                </div>
+                <div>
+                  <input type="text" name="article[img_url]" placeholder="Image URL">
+                </div>
+              <div class="input-title">
+                Category
+              </div>
+              <div>
+                <select class="" name="article[category]">
+                  <option value="">Select Category</option>
+                  <option value="Culture">Culture</option>
+                  <option value="Art and Design">Art and Design</option>
+                  <option value="Architecture">Architecture</option>
+                  <option value="People">Peopl</option>
+                </select>
+              </div>
+              <div class="input-title">
+                Author
+              </div>
+              <div>
+                <input type="text" name="article[author]" placeholder="name">
+              </div>
+            </div>
+
+              <div class="col s6">
+                <div class="input-title">
+                  Text Field
+                </div>
+                <div>
+                  <textarea name="article[content]" placeholder="Write your article"></textarea>
+                </div>
+              </div>
+            </div> <!-- /row -->
+
+            <div>
+              <button class="new-submit-btn" type="submit">SUBMIT</button>
+              <a href="/articles"><button class="new-back-btn" type="button" name="button">BACK</button></a>
+            </div>
+          </form>
+        </div>
       </div>
-      <div>
-        <input type="text" name="article[title]" placeholder="title">
-      </div>
-      <div>
-        Image
-      </div>
-      <div>
-        <input type="text" name="article[img_url]" placeholder="image url">
-      </div>
-      <div>
-        Text Field
-      </div>
-      <div>
-        <textarea name="article[content]" placeholder="write"></textarea>
-      </div>
-      <div>
-        Category
-      </div>
-      <div>
-        <select class="" name="article[category]">
-          <option value="Culture">Culture</option>
-          <option value="Art and Design">Art and Design</option>
-          <option value="Architecture">Architecture</option>
-          <option value="People">Peopl</option>
-        </select>
-      </div>
-      <div>
-        Author
-      </div>
-      <div>
-        <input type="text" name="article[author]" placeholder="name">
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+    </section>
 
   </body>
 </html>

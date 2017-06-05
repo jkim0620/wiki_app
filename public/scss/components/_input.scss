@@ -1,22 +1,8 @@
-// .caret {
-//   background-color: $red-orange;
-// }
+// New form styles
 
-input {
-  .select-dropdown {
-    border-bottom: $red-orange;
-    border-radius: 5px;
-    color: $red-orange;
-  }
-}
 
-.select-dropdown:active {
-  li {
-    color: $deep-purple-gray;
-  }
-}
-
-.edit-form {
+// Edit form styles
+.edit-form, .new-form {
   input {
     box-sizing: border-box;
     background: $light-gray;
@@ -32,11 +18,18 @@ input {
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 20px;
+    height: 150px;
   }
   .select-wrapper input.select-dropdown {
     padding-left: 20px;
     box-sizing: border-box;
-    background: $light-gray;
-    border-bottom: $neon-yellow 3px solid;
+    background: $neon-yellow;
+    border-bottom: $light-gray 3px solid;
+  }
+}
+
+.new-form {
+  textarea {
+    height: 300px;;
   }
 }

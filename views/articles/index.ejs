@@ -9,11 +9,11 @@
       <div class="container">
         <div class="row">
           <div class="col s3">
-            <h1>HOME PAGE</h1>
+            <h1>W</h1>
           </div>
-          <div class="col s3 push-s3">
-            <select class="" name="articles[category]" onChange="window.location.href=this.value">
-              <option value="http://localhost:3000/articles/">Select Category</option>
+          <div class="col s3 push-s5">
+            <select class="category-select" name="articles[category]" onChange="window.location.href=this.value">
+              <option value="http://localhost:3000/articles/">Category</option>
               <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
               <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
               <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
@@ -21,8 +21,8 @@
               <option value="http://localhost:3000/articles/">Show All</option>
             </select>
           </div>
-          <div class="col s3 push-s6">
-            <a class="" href="/articles/new">+</a>
+          <div class="col s1 push-s5">
+            <a href="/articles/new"><button class="new-form-link" type="button" name="button">+</button></a>
           </div>
 <!--
           <nav class=top-nav>
@@ -39,30 +39,40 @@
           <% articles.forEach((article) => { %>
           <div class="content-container">
             <div class="col s4">
-              <div class="img-box">
-                <img src="<%= article.img_url %>">
-              </div>
-            <!-- </div> -->
-            <!-- <div class="col s6"> -->
-              <div class="text-box">
-                <p class="category-font"><%= article.category %></p>
-                <p class="title-font"><%= article.title %></p>
-                <p class="author-font"><%= article.author %></p>
-                <p class="date-font"><%= article.date_created %></p>
-                <!-- <p class="content-font"><%= article.content %></p> -->
-                <div class="icon-circle">
-                  <a class="link-font" href="http://localhost:3000/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-2x icon-color" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+              <div class="article-box">
+                <div class="img-box">
+                  <img src="<%= article.img_url %>">
+                </div> <!-- /img-box -->
+
+                <div class="text-box">
+                  <p class="category-font"><%= article.category %></p>
+                  <p class="title-font"><%= article.title %></p>
+                  <p class="author-font"><%= article.author %></p>
+                  <p class="date-font"><%= article.date_created %></p>
+                  <!-- <p class="content-font"><%= article.content %></p> -->
+                  <div class="icon-circle">
+                    <a class="link-font" href="http://localhost:3000/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-2x icon-color" aria-hidden="true"></i></a>
+                  </div>
+                  <!-- <div class>
+
+                  </div> -->
+                </div> <!-- /text-box -->
+
+
+
+              </div> <!-- /article-box -->
+            </div> <!-- /col -->
+          </div> <!-- /content-container -->
           <% }); %>
-        </div>
+        </div> <!-- /row -->
+      </section> <!-- /article section -->
+    </div> <!-- /container -->
 
-      </section>
-    </div>
+    <section class="footer-section">
+      <div class="container">
 
-
+      </div>
+    </section>
 
   </body>
 </html>

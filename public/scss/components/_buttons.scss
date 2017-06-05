@@ -13,7 +13,7 @@
 
 // Buttons in edit form
 
-.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn {
+.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -36,8 +36,6 @@
   width: 50px;
 }
 
-
-
 // Delete modal buttons
 .delete-article {
   background: $red;
@@ -45,4 +43,15 @@
 
 .close-modal-btn {
   background: $deep-purple-gray;
+}
+
+// New form button
+.new-submit-btn {
+  background: $red;
+  width: 90px;
+}
+
+.new-back-btn {
+  background: $deep-purple-gray;
+  width: 80px;
 }

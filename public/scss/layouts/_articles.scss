@@ -1,16 +1,4 @@
-.nav {
-  background-color: $deep-purple-gray;
-  position: fixed;
-  top: 0;
-  left: 0;
-  h1 {
-    font-size: 30px;
-  }
-  width: 100%;
-  height: 90px;
-  border-bottom: 15px solid $neon-yellow;
-}
-
+// Home page layout styling
 .section-articles {
   box-sizing: border-box;
   width: 100%;
@@ -18,33 +6,45 @@
   margin: 0 auto;
 }
 
+.content-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// .article-box {
+//   height: 500px;
+//   width: auto;
+//   border: 1px $black solid;
+//   position: relative;
+//   overflow: hidden;
+//   &:hover {
+//     .caption-wrapper {
+//       bottom: 0;
+//     }
+//   }
+// }
+
 .img-box {
   img {
     width: 100%;
   }
-  // max-width: 800px;
   margin-top: 30px;
   margin-left: 10px;
   height: 200px;
   overflow: hidden;
 }
 
-.content-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  // height: auto;
-}
-
 .text-box {
   background: $light-gray;
-  // text-align: y;
   padding: 30px;
   margin-top: -30px;
   margin-left: 10px;
   height: 300px;
 }
 
+
+// Show page layout styling
 .show-wrapper {
   background-color: $deep-purple-gray;
 }
@@ -65,9 +65,22 @@
 }
 
 .article-container {
-  // margin: 90px auto;
   margin-top: -30px;
   padding: 60px;
   background-color: $white;
   text-align: justify;
+}
+
+// New page layout styling
+.new-section {
+  background: $deep-purple-gray;
+  height: 100vh;
+  padding: 50px;
+}
+
+.new-form-container {
+  background: $white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 70px;
 }

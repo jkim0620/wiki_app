@@ -4,21 +4,15 @@ body {
 h1 {
   color: #ffffff; }
 
-.nav {
-  background-color: #3a3947;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  border-bottom: 15px solid #eaff0a; }
-  .nav h1 {
-    font-size: 30px; }
-
 .section-articles {
   box-sizing: border-box;
   width: 100%;
   padding-top: 120px;
+  margin: 0 auto; }
+
+.content-container {
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .img-box {
@@ -28,11 +22,6 @@ h1 {
   overflow: hidden; }
   .img-box img {
     width: 100%; }
-
-.content-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto; }
 
 .text-box {
   background: #e6e6ed;
@@ -62,12 +51,59 @@ h1 {
   background-color: #ffffff;
   text-align: justify; }
 
+.new-section {
+  background: #3a3947;
+  height: 100vh;
+  padding: 50px; }
+
+.new-form-container {
+  background: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 70px; }
+
 .parallax-container {
   height: 500px;
   background: red;
   color: #ffffff; }
 
 .parallax p {
+  color: #ffffff; }
+
+.nav {
+  background-color: #3a3947;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  border-bottom: 15px solid #eaff0a;
+  z-index: 1000; }
+  .nav h1 {
+    font-size: 30px; }
+  .nav a {
+    color: #3a3947; }
+
+.category-select input.select-dropdown {
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-bottom: #e6e6ed 1px solid;
+  margin-bottom: 0;
+  margin-top: 18px;
+  color: #ffffff; }
+
+.new-form-link {
+  padding: 4px 7px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  margin-top: 18px;
+  font-size: 20px; }
+
+.caret {
+  z-index: 1500;
+  padding-right: 20px;
   color: #ffffff; }
 
 #edit-modal {
@@ -108,32 +144,28 @@ h1 {
   .edit-modal-content textarea {
     height: 150px; }
 
-input .select-dropdown {
-  border-bottom: #ff4800;
-  border-radius: 5px;
-  color: #ff4800; }
-
-.select-dropdown:active li {
-  color: #3a3947; }
-
-.edit-form input {
+.edit-form input, .new-form input {
   box-sizing: border-box;
   background: #e6e6ed;
   border-bottom: #eaff0a 3px solid;
   padding-left: 20px; }
-.edit-form .input-title {
+.edit-form .input-title, .new-form .input-title {
   color: #3a3947;
   font-weight: bold; }
-.edit-form textarea {
-  border: #e6e6ed solid 2px;
+.edit-form textarea, .new-form textarea {
+  border: #e6e6ed solid 3px;
   padding: 5px;
   border-radius: 5px;
-  margin-bottom: 20px; }
-.edit-form .select-wrapper input.select-dropdown {
+  margin-bottom: 20px;
+  height: 150px; }
+.edit-form .select-wrapper input.select-dropdown, .new-form .select-wrapper input.select-dropdown {
   padding-left: 20px;
   box-sizing: border-box;
-  background: #e6e6ed;
-  border-bottom: #eaff0a 3px solid; }
+  background: #eaff0a;
+  border-bottom: #e6e6ed 3px solid; }
+
+.new-form textarea {
+  height: 300px; }
 
 .edit-btn, .back-btn {
   padding: 10px;
@@ -146,7 +178,7 @@ input .select-dropdown {
   color: #ffffff;
   font-weight: bold; }
 
-.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn {
+.submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -169,6 +201,13 @@ input .select-dropdown {
   background: #fc0043; }
 
 .close-modal-btn {
+  background: #3a3947; }
+
+.new-submit-btn {
+  background: #fc0043;
+  width: 90px; }
+
+.new-back-btn {
   background: #3a3947; }
 
 .title-font {
