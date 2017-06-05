@@ -1,0 +1,32 @@
+.footer-section {
+  width: 100%;
+  height: 800px;
+  background: $neon-yellow;
+  margin-top: 70px;
+}
+
+.category-footer {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 700px;
+  padding-top: 300px;
+  .caret {
+    padding-top: 300px;
+  }
+}
+
+.footer-content-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  .copyright {
+    padding-top: 200px;
+    font-size: 17px;
+  }
+  .new-form-link-footer {
+    background: transparent;
+    color: $deep-purple-gray;
+    border: none;
+    padding-top: 15px;
+  }
+}

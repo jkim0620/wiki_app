@@ -7,23 +7,23 @@
   border: none;
   background-color: $red;
   color: $white;
-  font-weight: bold;
+  // font-weight: lighter;
 }
 
 
 // Buttons in edit form
-
 .submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
-  font-weight: bold;
+  // font-weight: lighter;
   border: none;
   color: $white;
 }
 
 .submit-change-btn {
   background: $red;
+  width: 90px;
 }
 
 .close-edit-modal-btn {
