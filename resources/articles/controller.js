@@ -30,19 +30,6 @@ controller.index = (req, res) => {
   }
 }
 
-// controller.showAll = (req, res) => {
-//   Article
-//   .findAll()
-//   .then((articles) => {
-//     res.render('articles/all.ejs', {
-//       articles: articles
-//     })
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-// }
-
 controller.indexNew = (req, res) => {
   res.render('articles/new.ejs');
 }
