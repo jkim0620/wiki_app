@@ -18,12 +18,12 @@
     <div class="container">
       <section class="section-articles">
         <select class="select-category" name="articles[category]" onChange="window.location.href=this.value">
-          <option value="http://localhost:3000/articles/">Category</option>
-          <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
-          <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
-          <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
-          <option value="http://localhost:3000/articles/?category=People">People</option>
-          <option value="http://localhost:3000/articles/">Show All</option>
+          <option value="/articles/">Category</option>
+          <option value="/articles/?category=Culture">Culture</option>
+          <option value="/articles/?category=Art+and+Design">Art and Design</option>
+          <option value="/articles/?category=Architecture">Architecture</option>
+          <option value="/articles/?category=People">People</option>
+          <option value="/articles/">Show All</option>
         </select>
         <div class="row">
           <% articles.forEach((article) => { %>
@@ -39,7 +39,7 @@
                   <p class="author-font"><%= article.author %></p>
                   <p class="date-font"><%= article.date_created %></p>
                   <div class="icon-circle">
-                    <a class="link-font" href="http://localhost:3000/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-1x icon-color" aria-hidden="true"></i></a>
+                    <a class="link-font" href="/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-1x icon-color" aria-hidden="true"></i></a>
                   </div>
                 </div> <!-- /text-box -->
               </div> <!-- /article-box -->
@@ -53,12 +53,12 @@
     <section class="footer-section">
       <div class="container">
         <select class="category-footer" name="articles[category]" onChange="window.location.href=this.value">
-          <option value="http://localhost:3000/articles/">Category</option>
-          <option value="http://localhost:3000/articles/?category=Culture">Culture</option>
-          <option value="http://localhost:3000/articles/?category=Art+and+Design">Art and Design</option>
-          <option value="http://localhost:3000/articles/?category=Architecture">Architecture</option>
-          <option value="http://localhost:3000/articles/?category=People">People</option>
-          <option value="http://localhost:3000/articles/">Show All</option>
+          <option value="/articles/">Category</option>
+          <option value="/articles/?category=Culture">Culture</option>
+          <option value="/articles/?category=Art+and+Design">Art and Design</option>
+          <option value="/articles/?category=Architecture">Architecture</option>
+          <option value="/articles/?category=People">People</option>
+          <option value="/articles/">Show All</option>
         </select>
         <div class="footer-content-container">
           <a href="/articles/new"><button class="new-form-link-footer" type="button" name="button">Add New +</button></a>
