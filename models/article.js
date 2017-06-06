@@ -19,6 +19,13 @@ Article.sort = (category) => {
   `, category)
 }
 
+Article.getCategories = () => {
+  return db.any(`
+    SELECT DISTINCT category
+    FROM articles
+  `);
+}
+
 Article.save = (article) => {
   return db.one(`
     INSERT INTO articles (

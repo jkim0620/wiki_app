@@ -2,32 +2,87 @@ const Article = require('../../models/article');
 
 let controller = {};
 
+//ORIGINAL
+
+// controller.index = (req, res) => {
+//   if (req.query.category) {
+//     Article
+//     .sort({
+//       category: req.query.category
+//     })
+//     .then((articles) => {
+//       res.render('articles/index.ejs', {
+//         articles: articles,
+//         category: req.query.category
+//       })
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+//   } else {
+//     Article
+//     .findAll()
+//     .then((articles) => {
+//       res.render('articles/index.ejs', {
+//         articles: articles,
+//         category: req.query.category
+//       })
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+//   }
+// }
+
 controller.index = (req, res) => {
+  let articlePromise;
+
   if (req.query.category) {
-    Article
-    .sort({
-      category: req.query.category
-    })
-    .then((articles) => {
-      res.render('articles/index.ejs', {
-        articles: articles
-      })
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    articlePromise = Article
+      .sort({
+        category: req.query.category
+      });
+    // .then((articles) => {
+    //   res.render('articles/index.ejs', {
+    //     articles: articles,
+    //     category: req.query.category
+    //   })
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+    // });
   } else {
+    articlePromise = Article
+      .findAll();
+    // .then((articles) => {
+    //   res.render('articles/index.ejs', {
+    //     articles: articles,
+    //     category: req.query.category
+    //   })
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+    // });
+  }
+
+  articlePromise
+  .then((articles) => {
     Article
-    .findAll()
-    .then((articles) => {
+    .getCategories()
+    .then((categories) => {
       res.render('articles/index.ejs', {
-        articles: articles
-      })
+        articles: articles,
+        category: req.query.category,
+        categories: categories
+      });
     })
     .catch((err) => {
       console.log(err);
     });
-  }
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 }
 
 controller.indexNew = (req, res) => {

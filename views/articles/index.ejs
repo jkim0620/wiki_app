@@ -18,12 +18,11 @@
     <div class="container">
       <section class="section-articles">
         <select class="select-category" name="articles[category]" onChange="window.location.href=this.value">
-          <option value="/articles/">Category</option>
-          <option value="/articles/?category=Culture">Culture</option>
-          <option value="/articles/?category=Art+and+Design">Art and Design</option>
-          <option value="/articles/?category=Architecture">Architecture</option>
-          <option value="/articles/?category=People">People</option>
           <option value="/articles/">Show All</option>
+
+          <% categories.forEach((cat) => { %>
+            <option value="/articles/?category=<%= cat.category %>" <%= category === cat.category ? "selected" : "" %>><%= cat.category %></option>
+          <% }); %>
         </select>
         <div class="row">
           <% articles.forEach((article) => { %>
