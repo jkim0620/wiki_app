@@ -7,11 +7,26 @@
 https://project2-wikiapp.herokuapp.com/articles
 
 My project is an inspirational wiki app for designers and artists or anyone who is in need of artistic inspiration.
-* User can READ inspirational articles to be inspired.
-* User can CREATE a new article to share their inspiration and insights.
-* User can UPDATE the article by editing, or DELETE the ones they no longer want.
-* User can SORT by categories :
-Art and Design / Architecture / Culture / People)
+* User can **READ** inspirational articles to be inspired.
+* User can **CREATE** a new article to share their inspiration and insights.
+* User can **UPDATE** the article by editing, or **DELETE** the ones they no longer want.
+* User can **SORT** by categories :
+Art and Design / Architecture / Culture / People
+
+##### Screenshot
+
+![screen shot 2017-06-10 at 2 37 33 pm](https://user-images.githubusercontent.com/18605009/27005544-504215ec-4dee-11e7-950e-5d094bb0fa6e.png)
+
+##### Color swatches
+
+![swatch1](https://user-images.githubusercontent.com/18605009/27005497-a26fc2c0-4ded-11e7-9fff-fa37ae1928f7.png)  - #3a3947
+
+
+![swatch2](https://user-images.githubusercontent.com/18605009/27005513-ba758fda-4ded-11e7-9370-1456599f14e9.png)  - #eaff0a
+
+
+![swatch3](https://user-images.githubusercontent.com/18605009/27005518-c96b0e34-4ded-11e7-9bbd-9fcf55274820.png)  - #ffffff
+
 ---
 
 ### ERD Setup
@@ -20,10 +35,36 @@ Art and Design / Architecture / Culture / People)
 
 ---
 
+### Route Path Whiteboarding
+
+![fullsizerender](https://git.generalassemb.ly/storage/user/6270/files/4f18b138-4df0-11e7-8a5e-02822a2ca3ed)
+
+---
+
+### CRUD and AJAX
+
+* GET method - to READ all the data and render on home page
+* POST method - to CREATE new data
+* PUT method - to UPDATE data
+* DELETE ajax call - to DELETE data from the database
+
+---
+
+### Instructions
+##### How to download the code and run it on localhost
+
+1. Fork repository.
+2. Once forked, click on 'clone or download' and copy the link.
+3. In your terminal ```cd``` into the folder you wish to save the files and ```$ git clone copiedLink```.
+4. In terminal, stay inside your root folder and ```$ psql -f database/migration.sql```.
+5. In terminal command ```$ nodemon``` and on your browser ```localhost:3000/articles``` will take you to the app.
+
+---
+
 ### Built with
 
 ##### Front End
-* **jQuery** for DOM Manipulation - popups, modals, alert, click functions, Math functions, time setting etc.
+* **jQuery** 
 * **HTML5**
 * **SCSS**
 * **Materialize** for grid system and responsive web page
@@ -34,40 +75,7 @@ Art and Design / Architecture / Culture / People)
 
 ---
 
-### Screenshot
-
-![screen shot 2017-06-10 at 2 37 33 pm](https://user-images.githubusercontent.com/18605009/27005544-504215ec-4dee-11e7-950e-5d094bb0fa6e.png)
-
-
-![screen shot 2017-06-10 at 2 38 16 pm](https://user-images.githubusercontent.com/18605009/27005549-68f75c46-4dee-11e7-832a-995e9928b0ee.png)
-
----
-
-### Color swatches
-
-![swatch1](https://user-images.githubusercontent.com/18605009/27005497-a26fc2c0-4ded-11e7-9fff-fa37ae1928f7.png)  - #3a3947
-
-
-![swatch2](https://user-images.githubusercontent.com/18605009/27005513-ba758fda-4ded-11e7-9370-1456599f14e9.png)  - #eaff0a
-
-
-![swatch3](https://user-images.githubusercontent.com/18605009/27005518-c96b0e34-4ded-11e7-9bbd-9fcf55274820.png)  - #ffffff
-
-
----
-
-### How to play
-
-* User will be given a random card.
-* Cards will flash instantly face up and then back down.
-* User gets 3 guesses to find the matching card.
-* User will be hinted with hot & cold clues.
-
----
-
 ### Unsolved problems
 
-* **Flipping effect**
-* **Adding keypress functions** for a better user experience
-
----
+* **Better UX** - for the 'add new article button'.
+* **Mobile Friendly** - make it more responsive.
