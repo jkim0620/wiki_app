@@ -2,16 +2,21 @@
 
 ### Overview
 
-**Web Based CRUD Application - Inspirational Wiki App**
+#### Inspirational Wiki App - A web based CRUD application
 
 https://project2-wikiapp.herokuapp.com/articles
 
-My project is an inspirational wiki app for designers and artists or anyone who is in need of artistic inspiration.
+--
+
+**My project is an inspirational wiki app for designers and artists or anyone who is in need of artistic inspiration.**
 * User can **READ** inspirational articles to be inspired.
 * User can **CREATE** a new article to share their inspiration and insights.
 * User can **UPDATE** the article by editing, or **DELETE** the ones they no longer want.
 * User can **SORT** by categories :
 Art and Design / Architecture / Culture / People
+
+--
+
 
 ##### Screenshot
 
@@ -64,7 +69,7 @@ Art and Design / Architecture / Culture / People
 ### Built with
 
 ##### Front End
-* **jQuery** 
+* **jQuery**
 * **HTML5**
 * **SCSS**
 * **Materialize** for grid system and responsive web page
@@ -72,10 +77,3 @@ Art and Design / Architecture / Culture / People
 ##### Back End
 * **SQL**
 * **Node.js** with **Express**
-
----
-
-### Unsolved problems
-
-* **Better UX** - for the 'add new article button'.
-* **Mobile Friendly** - make it more responsive.
