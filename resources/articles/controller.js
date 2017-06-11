@@ -42,28 +42,10 @@ controller.index = (req, res) => {
       .sort({
         category: req.query.category
       });
-    // .then((articles) => {
-    //   res.render('articles/index.ejs', {
-    //     articles: articles,
-    //     category: req.query.category
-    //   })
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // });
-  } else {
-    articlePromise = Article
-      .findAll();
-    // .then((articles) => {
-    //   res.render('articles/index.ejs', {
-    //     articles: articles,
-    //     category: req.query.category
-    //   })
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // });
-  }
+    } else {
+      articlePromise = Article
+        .findAll();
+    }
 
   articlePromise
   .then((articles) => {
@@ -83,7 +65,7 @@ controller.index = (req, res) => {
   .catch((err) => {
     console.log(err);
   });
-}
+} // End of controller.index
 
 controller.indexNew = (req, res) => {
   res.render('articles/new.ejs');

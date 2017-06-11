@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-// const logger = require('morgan');
+const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
@@ -16,7 +16,7 @@ const dir = {
   materialize: path.join(__dirname, 'node_modules/materialize-css/dist'),
 };
 
-// app.use(logger());
+app.use(logger(process.env.NODE_ENV === 'production' ? 'common' : 'dev'));
 
 // Use body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -61,4 +61,4 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(PORT, () => console.log('Server running!'));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}!`));
