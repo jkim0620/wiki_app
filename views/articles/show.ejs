@@ -5,7 +5,6 @@
   </head>
   <body>
 
-    <!-- <a class="" href="/articles/new">+</a> -->
     <div class="show-wrapper">
       <div class="container">
         <div class="wrapper">
@@ -24,6 +23,7 @@
         </div>
       </div>
 
+      <!-- Hidden modal for edit form -->
       <div class="edit-modal-container">
         <div class="edit-modal-content">
           <form class="edit-form" method="POST" action="/articles/<%= article.id %>?_method=put">
@@ -50,7 +50,6 @@
             </div>
             <div>
               <select class="" name="article[category]">
-                <!-- <option value="<%= article.category %>"><%= article.category %></option> -->
                 <option value="Culture" <%= article.category === "Culture" ? "selected" : "" %>>Culture</option>
                 <option value="Art and Design" <%= article.category === "Art and Design" ? "selected" : "" %>>Art and Design</option>
                 <option value="Architecture" <%= article.category === "Architecture" ? "selected" : "" %>>Architecture</option>
@@ -76,8 +75,9 @@
             </div>
           </div> <!-- /button -->
         </div> <!-- /edit-modal-content -->
-      </div> <!-- /edit-modal-container -->
+      </div> <!-- /end of edit-modal-container -->
 
+      <!-- Hidden modal for delete confirmation -->
       <div class="delete-modal-container">
         <div class="delete-modal-content">
           <p>
@@ -86,7 +86,7 @@
           <button class="delete-article" data-id=<%= article.id %>>DELETE</button>
           <button class="close-modal-btn">CLOSE</button>
         </div>
-      </div>
+      </div> <!-- /end of delete modal -->
 
 
     </div>
