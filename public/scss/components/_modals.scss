@@ -16,13 +16,14 @@
 // Edit modal
 .edit-modal-container {
   background: rgba(0,0,0, 0.7);
+  height: 100%;
 }
 
 .edit-modal-content {
   margin: 0 auto;
   width: 50%;
+  height: auto;
   max-width: 800px;
-  max-height: 120vh;
   padding: 50px 70px;
   background: $white;
   textarea {
