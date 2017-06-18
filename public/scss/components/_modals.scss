@@ -29,6 +29,10 @@
   textarea {
     height: 150px;
   }
+  @include sm-media {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 // Delete modal

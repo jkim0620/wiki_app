@@ -59,6 +59,11 @@
   }
   border-right: 50px solid $neon-yellow;
   border-bottom: 50px solid $neon-yellow;
+  @include sm-media {
+    width: 100%;
+    border-right: 20px solid $neon-yellow;
+    border-bottom: 20px solid $neon-yellow;
+  }
 }
 
 .article-container {
@@ -67,6 +72,9 @@
   background-color: $white;
   height: 100%;
   text-align: justify;
+  @include sm-media {
+    padding: 20px;
+  }
 }
 
 // New page layout styling
@@ -75,6 +83,9 @@
   height: 100vh;
   padding: 50px;
   overflow: scroll;
+  @include sm-media {
+    padding: 0;
+  }
 }
 
 .new-form-container {
@@ -85,4 +96,10 @@
   padding: 70px;
   border-bottom: solid $neon-yellow 40px;
   border-right: solid $neon-yellow 40px;
+  @include sm-media {
+    height: 100%;
+    padding: 10px;
+    border-right: 20px solid $neon-yellow;
+    border-bottom: 20px solid $neon-yellow;
+  }
 }

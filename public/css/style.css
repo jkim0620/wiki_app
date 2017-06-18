@@ -54,6 +54,11 @@ h1 {
   border-bottom: 50px solid #eaff0a; }
   .article-wrapper img {
     width: 100%; }
+  @media (max-width: 600px) {
+    .article-wrapper {
+      width: 100%;
+      border-right: 20px solid #eaff0a;
+      border-bottom: 20px solid #eaff0a; } }
 
 .article-container {
   margin-top: -30px;
@@ -61,12 +66,18 @@ h1 {
   background-color: #ffffff;
   height: 100%;
   text-align: justify; }
+  @media (max-width: 600px) {
+    .article-container {
+      padding: 20px; } }
 
 .new-section {
   background: #3a3947;
   height: 100vh;
   padding: 50px;
   overflow: scroll; }
+  @media (max-width: 600px) {
+    .new-section {
+      padding: 0; } }
 
 .new-form-container {
   background: #ffffff;
@@ -76,6 +87,12 @@ h1 {
   padding: 70px;
   border-bottom: solid #eaff0a 40px;
   border-right: solid #eaff0a 40px; }
+  @media (max-width: 600px) {
+    .new-form-container {
+      height: 100%;
+      padding: 10px;
+      border-right: 20px solid #eaff0a;
+      border-bottom: 20px solid #eaff0a; } }
 
 .nav-section {
   background-color: #3a3947;
@@ -166,6 +183,10 @@ h1 {
   background: #ffffff; }
   .edit-modal-content textarea {
     height: 150px; }
+  @media (max-width: 600px) {
+    .edit-modal-content {
+      width: 100%;
+      padding: 20px; } }
 
 .delete-modal-container {
   background: rgba(0, 0, 0, 0.7); }
