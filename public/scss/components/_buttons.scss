@@ -16,6 +16,17 @@
   }
 }
 
+// ADD NEW btn
+.new-form-link-btn {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: $red;
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 // Buttons in edit form
 .edit-btn, .back-btn {
   width: 80px;
@@ -34,9 +45,11 @@
   width: 90px;
 }
 
-.close-edit-modal-btn {
+.close-edit-modal-btn, .close-modal-btn, .new-back-btn {
   width: 90px;
-  background: $deep-purple-gray;
+  background: $white;
+  color: $red;
+  border: $red 2px solid;
 }
 
 .open-modal-btn {
@@ -50,18 +63,8 @@
   background: $red;
 }
 
-.close-modal-btn {
-  width: 90px;
-  background: $deep-purple-gray;
-}
-
 // New form button
 .new-submit-btn {
   background: $red;
   width: 90px;
-}
-
-.new-back-btn {
-  background: $deep-purple-gray;
-  width: 80px;
 }

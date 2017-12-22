@@ -9,13 +9,12 @@
 
     <div class="container">
       <section class="section-articles">
-        <select class="select-category" name="articles[category]" onChange="window.location.href=this.value">
-          <option value="/articles/">Show All</option>
-
-          <% categories.forEach((cat) => { %>
+          <select class="select-category" name="articles[category]" onChange="window.location.href=this.value">
+            <option value="/articles/">Show All</option>
+            <% categories.forEach((cat) => { %>
             <option value="/articles/?category=<%= cat.category %>" <%= category === cat.category ? "selected" : "" %>><%= cat.category %></option>
-          <% }); %>
-        </select>
+            <% }); %>
+          </select>
         <div class="row">
           <% articles.forEach((article) => { %>
           <div class="content-container">
@@ -41,22 +40,7 @@
       </section> <!-- /article section -->
     </div> <!-- /container -->
 
-    <section class="footer-section">
-      <div class="container">
-        <select class="category-footer" name="articles[category]" onChange="window.location.href=this.value">
-          <option value="/articles/">Category</option>
-          <option value="/articles/?category=Culture">Culture</option>
-          <option value="/articles/?category=Art+and+Design">Art and Design</option>
-          <option value="/articles/?category=Architecture">Architecture</option>
-          <option value="/articles/?category=People">People</option>
-          <option value="/articles/">Show All</option>
-        </select>
-        <div class="footer-content-container">
-          <a href="/articles/new"><button class="new-form-link-footer" type="button" name="button">Add New +</button></a>
-          <p class="copyright"><i class="fa fa-copyright fa-1x" aria-hidden="true"></i> Julia Kim</p>
-        </div>
-      </div> <!-- /container -->
-    </section>
+    <%- include ./partials/footer.ejs %>
 
   </body>
 </html>
