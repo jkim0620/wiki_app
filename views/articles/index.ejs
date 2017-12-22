@@ -5,7 +5,7 @@
   </head>
   <body>
 
-    <%- include ./partials/nav.ejs %>
+    <%- include ./partials/hide-nav.ejs %>
 
     <div class="container">
       <section class="section-articles">
@@ -22,16 +22,16 @@
             <div class="col s12 m6 l4">
               <div class="article-box">
                 <div class="img-box">
-                  <img src="<%= article.img_url %>">
+                  <a href="/articles/<%= article.id %>"><img src="<%= article.img_url %>"></a>
                 </div> <!-- /img-box -->
                 <div class="text-box">
                   <p class="category-font"><%= article.category %></p>
-                  <p class="title-font"><%= article.title %></p>
+                  <a href="/articles/<%= article.id %>"><p class="title-font"><%= article.title %></p></a>
                   <p class="author-font"><%= article.author %></p>
                   <p class="date-font"><%= article.date_created %></p>
-                  <div class="icon-circle">
+                  <!-- <div class="icon-circle">
                     <a class="link-font" href="/articles/<%= article.id %>"><i class="fa fa-arrow-right fa-1x icon-color" aria-hidden="true"></i></a>
-                  </div>
+                  </div> -->
                 </div> <!-- /text-box -->
               </div> <!-- /article-box -->
             </div> <!-- /col -->

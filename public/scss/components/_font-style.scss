@@ -1,7 +1,11 @@
 .title-font {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 22px;
+  @include lg-media {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .date-font {
@@ -35,5 +39,5 @@
 }
 
 .logo-color {
-  color: #7a798e;
+  color: $gray;
 }

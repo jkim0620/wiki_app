@@ -1,7 +1,7 @@
 .footer-section {
   width: 100%;
   height: 800px;
-  background: $neon-yellow;
+  background: $light-gray;
   margin-top: 70px;
 }
 
@@ -25,7 +25,8 @@
   }
   .new-form-link-footer {
     background: transparent;
-    color: $deep-purple-gray;
+    color: $red;
+    font-weight: 500;
     border: none;
     padding-top: 15px;
   }

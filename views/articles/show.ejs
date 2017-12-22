@@ -4,6 +4,7 @@
     <%- include ./partials/head.ejs %>
   </head>
   <body>
+    <%- include ./partials/hide-nav.ejs %>
 
     <div class="show-wrapper">
       <div class="container">
@@ -16,9 +17,9 @@
               <p class="author-font"><%= article.author %></p>
               <p class="date-font"><%= article.date_created %></p>
               <p class="content-font"><%= article.content %></p>
-              <button class="edit-btn" type="button" name="button">EDIT</button>
-              <a href="/articles?category=<%= article.category %>"><button class="back-btn" type="button" name="button">BACK</button></a>
             </div>
+            <div class="edit-btn">EDIT</div>
+            <a href="/articles?category=<%= article.category %>"><div class="back-btn">BACK</div></a>
           </div>
         </div>
       </div>
@@ -65,8 +66,8 @@
             <div>
               <input type="hidden" name="article[id]" value="<%= article.id %>">
             </div>
-            <button class="submit-change-btn" type="submit">SUBMIT</button>
-            <button class="close-edit-modal-btn">CLOSE</button>
+            <div class="submit-change-btn" type="submit">SUBMIT</div>
+            <div class="close-edit-modal-btn">CLOSE</div>
           </form>
           <!-- button container -->
           <div class="row btn-container">

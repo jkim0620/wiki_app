@@ -4,7 +4,7 @@
   input {
     box-sizing: border-box;
     background: $light-gray;
-    border-bottom: $neon-yellow 3px solid;
+    border-bottom: $red 3px solid;
     padding-left: 20px;
   }
   .input-title {
@@ -21,8 +21,8 @@
   .select-wrapper input.select-dropdown {
     padding-left: 20px;
     box-sizing: border-box;
-    background: $neon-yellow;
-    border-bottom: $light-gray 3px solid;
+    background: $light-gray;
+    border-bottom: $red 3px solid;
   }
 }
 

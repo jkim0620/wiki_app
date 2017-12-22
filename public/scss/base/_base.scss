@@ -1,3 +1,18 @@
+* {
+  a:focus {
+    outline: none;
+  }
+  a {
+    color: inherit;
+  }
+  a:hover {
+    color: rgba(0,0,0,0.6);
+  }
+  &:active {
+    background-color: none;
+  }
+}
+
 body {
   background: $white;
   font-family: "Avenir";

@@ -1,16 +1,32 @@
 // All buttons
 .edit-btn, .back-btn, .submit-change-btn, .close-edit-modal-btn, .open-modal-btn, .delete-article, .close-modal-btn, .new-submit-btn, .new-back-btn {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
   margin: 10px;
   border: none;
   color: $white;
+  text-align: center;
+  display: inline;
+  &:hover {
+    cursor: pointer;
+  }
+  @include sm-media {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
 }
 
 // Buttons in edit form
 .edit-btn, .back-btn {
   width: 80px;
+  background-color: $white;
+  border: 2px $red solid;
+  color: $red;
+}
+
+.back-btn {
   background-color: $red;
+  color: $white;
 }
 
 .submit-change-btn {

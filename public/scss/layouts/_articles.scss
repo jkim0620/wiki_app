@@ -4,6 +4,10 @@
   width: 100%;
   padding-top: 120px;
   margin: 0 auto;
+  @include sm-media {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .select-category {
@@ -23,10 +27,19 @@
   img {
     width: 100%;
   }
+  img:hover {
+    opacity: 0.7;
+  }
   margin-top: 30px;
   margin-left: 10px;
   height: 200px;
   overflow: hidden;
+  @include lg-media {
+    height: 150px;
+  }
+  @include md-media {
+    height: 200px;
+  }
 }
 
 .text-box {
@@ -34,14 +47,19 @@
   padding: 30px;
   margin-top: -30px;
   margin-left: 10px;
-  height: 350px;
+  height: 300px;
+  @include lg-media {
+    // height: 400px;
+  }
+  @include sm-media {
+    height: auto;
+  }
 }
 
 
 // Show page layout styling
 .show-wrapper {
-  background-color: $deep-purple-gray;
-
+  background-color: $white;
 }
 
 .wrapper {
@@ -51,40 +69,55 @@
 }
 
 .article-wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
   max-width: 980px;
   img {
     width: 100%;
   }
-  border-right: 50px solid $neon-yellow;
-  border-bottom: 50px solid $neon-yellow;
+  @include lg-media {
+    width: 95%;
+  }
   @include sm-media {
-    width: 100%;
-    border-right: 20px solid $neon-yellow;
-    border-bottom: 20px solid $neon-yellow;
+    width: 85%;
   }
 }
 
 .article-container {
-  margin-top: -30px;
-  padding: 60px;
-  background-color: $white;
-  height: 100%;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding: 1px 60px;
+  // background-color: $light-gray;
+  height: auto;
   text-align: justify;
+  border-left: 4px solid $red;
+  .title-font {
+    font-size: 22px;
+    text-align: left;
+    line-height: 27px;
+  }
   @include sm-media {
-    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 15px;
+    border: none;
+    .title-font {
+      font-size: 17px;
+      line-height: 23px;
+    }
   }
 }
 
 // New page layout styling
 .new-section {
-  background: $deep-purple-gray;
+  background: $light-gray;
   height: 100vh;
   padding: 50px;
   overflow: scroll;
   @include sm-media {
-    padding: 0;
+    padding: 15px;
   }
 }
 
@@ -94,12 +127,11 @@
   margin: 0 auto;
   height: 90%;
   padding: 70px;
-  border-bottom: solid $neon-yellow 40px;
-  border-right: solid $neon-yellow 40px;
+  border-bottom: solid $red 10px;
+  border-right: solid $red 10px;
   @include sm-media {
     height: 100%;
     padding: 10px;
-    border-right: 20px solid $neon-yellow;
-    border-bottom: 20px solid $neon-yellow;
+    border: none;
   }
 }

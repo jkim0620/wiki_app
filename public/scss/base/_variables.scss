@@ -14,10 +14,22 @@ $bold-font-size: 17px;
 // $base-font-family:
 
 // Media query breakpoints
-$sm-media-width: 600px;
+$sm-media-width: 650px;
 
 @mixin sm-media {
   @media (max-width:#{$sm-media-width}) {
+    @content;
+  }
+}
+
+@mixin md-media {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin lg-media {
+  @media (max-width: 1200px) {
     @content;
   }
 }
